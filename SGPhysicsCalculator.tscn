@@ -1,0 +1,175 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/images/ggcmnjaeuiq21.webp" type="Texture" id=1]
+[ext_resource path="res://SGPhysicsCalculator.gd" type="Script" id=2]
+
+[node name="SGPhysicsCalculator" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+margin_top = 26.0
+margin_right = 98.0
+margin_bottom = 72.0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 91.0
+margin_bottom = 39.0
+
+[node name="Type" type="Label" parent="CanvasLayer/PanelContainer/GridContainer"]
+margin_bottom = 14.0
+align = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/GridContainer"]
+margin_top = 18.0
+margin_bottom = 32.0
+align = 1
+
+[node name="Keys" type="PanelContainer" parent="CanvasLayer"]
+margin_left = 9.0
+margin_top = 69.0
+margin_right = 91.0
+margin_bottom = 199.0
+
+[node name="Numbers" type="GridContainer" parent="CanvasLayer/Keys"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 75.0
+margin_bottom = 123.0
+columns = 3
+
+[node name="Button1" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_right = 20.0
+margin_bottom = 20.0
+text = "1"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_left = 24.0
+margin_right = 44.0
+margin_bottom = 20.0
+text = "2"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_left = 48.0
+margin_right = 68.0
+margin_bottom = 20.0
+text = "3"
+
+[node name="Button4" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+text = "4"
+
+[node name="Button5" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 44.0
+margin_bottom = 44.0
+text = "5"
+
+[node name="Button6" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_left = 48.0
+margin_top = 24.0
+margin_right = 68.0
+margin_bottom = 44.0
+text = "6"
+
+[node name="Button7" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_top = 48.0
+margin_right = 20.0
+margin_bottom = 68.0
+text = "7"
+
+[node name="Button8" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_left = 24.0
+margin_top = 48.0
+margin_right = 44.0
+margin_bottom = 68.0
+text = "8"
+
+[node name="Button9" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_left = 48.0
+margin_top = 48.0
+margin_right = 68.0
+margin_bottom = 68.0
+text = "9"
+
+[node name="Button0" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_top = 72.0
+margin_right = 20.0
+margin_bottom = 92.0
+text = "0"
+
+[node name="ButtonResult" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_left = 24.0
+margin_top = 72.0
+margin_right = 44.0
+margin_bottom = 92.0
+text = "="
+
+[node name="ButtonDot" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_left = 48.0
+margin_top = 72.0
+margin_right = 68.0
+margin_bottom = 92.0
+text = "."
+
+[node name="ButtonClear" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_top = 96.0
+margin_right = 20.0
+margin_bottom = 116.0
+text = "C"
+
+[node name="ButtonClipboard" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_left = 24.0
+margin_top = 96.0
+margin_right = 44.0
+margin_bottom = 116.0
+text = "^"
+
+[node name="ButtonPaste" type="Button" parent="CanvasLayer/Keys/Numbers"]
+margin_left = 48.0
+margin_top = 96.0
+margin_right = 68.0
+margin_bottom = 116.0
+text = ">"
+
+[node name="Hints" type="PanelContainer" parent="CanvasLayer"]
+margin_top = -1.0
+margin_right = 100.0
+margin_bottom = 27.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Hints"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 93.0
+margin_bottom = 21.0
+align = 1
+
+[node name="Ggcmnjaeuiq21" type="Sprite" parent="."]
+position = Vector2( -184, 280 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/Button1" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/Button6" to="." method="_on_Button6_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/Button7" to="." method="_on_Button7_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/Button8" to="." method="_on_Button8_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/Button9" to="." method="_on_Button9_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/Button0" to="." method="_on_Button0_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/ButtonResult" to="." method="_on_ButtonResult_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/ButtonDot" to="." method="_on_ButtonDot_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/ButtonClear" to="." method="_on_ButtonClear_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/ButtonClipboard" to="." method="_on_ButtonClipboard_pressed"]
+[connection signal="pressed" from="CanvasLayer/Keys/Numbers/ButtonPaste" to="." method="_on_ButtonPaste_pressed"]
